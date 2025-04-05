@@ -1,6 +1,6 @@
 # MTLS Client and Server with Spring Boot
 
-This project implements MTLS (Mutual TLS) between 2 Spring Boot applications. It contains two main modules:
+This project implements MTLS (Mutual TLS) connection between 2 Spring Boot applications. It contains two main modules:
 
 - mtls-client: The client module that calls the server over a secure MTLS connection
 
