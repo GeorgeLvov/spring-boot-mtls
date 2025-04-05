@@ -47,7 +47,7 @@ If you do not have a Unix-based system or prefer not to run the script, there ar
 
  - Use the `certs-generated` branch:
    In the `certs-generated` branch of the project repository, the keystores and truststores are already pre-generated. 
-   You can simply check out this branch and use the certificates that are already created and placed in the appropriate directories. This eliminates the need to run the script yourself.
+   You can simply check out this branch and use the certificates that are already created and placed in the `resources/certs` directories. This eliminates the need to run the script yourself.
  - Manually generate keystores and truststores:
    Use the provided `keytool` commands directly from the script.
    Once generated, manually place the keystores and truststores in the `resources/certs` directory for both the `mtls-client` and `mtls-server` modules.
