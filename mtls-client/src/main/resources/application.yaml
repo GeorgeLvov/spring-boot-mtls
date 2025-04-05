@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: mtls-client
+
+module-resources-path: mtls-client/src/main/resources
+
+client:
+  ssl:
+    key-store-path: ${module-resources-path}/certs/mtls-client-keystore.p12
+    key-store-password: password
+    trust-store-path: ${module-resources-path}/certs/mtls-client-truststore.p12
+    trust-store-password: password
+
+mtls-server:
+  url: https://localhost:8443/ping-server

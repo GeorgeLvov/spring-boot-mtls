@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: mtls-server
+
+module-resources-path: mtls-server/src/main/resources
+
+server:
+  port: 8443
+  ssl:
+    key-store: ${module-resources-path}/certs/mtls-server-keystore.p12
+    key-store-password: password
+    key-store-type: PKCS12
+    trust-store: ${module-resources-path}/certs/mtls-server-truststore.p12
+    trust-store-password: password
+    trust-store-type: PKCS12
+    client-auth: need
