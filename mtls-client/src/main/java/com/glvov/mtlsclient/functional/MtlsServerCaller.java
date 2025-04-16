@@ -28,7 +28,7 @@ public class MtlsServerCaller {
                     .toEntity(String.class)
                     .block();
 
-            log.info("Response: " + response);
+            log.info("Response: {}", response);
 
             String responseInfo = response != null ?
                     String.format(" Response: %s, %s", response.getStatusCode(), response.getBody())

@@ -21,12 +21,12 @@ mkdir -p "$SERVER_CERTS_DIR"
 
 # Generate keystores
 keytool -genkeypair -v -keystore "$KEYSTORE_CLIENT" -storetype PKCS12 \
-  -alias mtls-client -keyalg RSA -keysize 2048 -validity 365 \
+  -alias mtls-client -keyalg RSA -keysize 2048 -validity 54750 \
   -storepass password -keypass password \
   -dname "CN=localhost, OU=dev, O=example, L=city, ST=state, C=US"
 
 keytool -genkeypair -v -keystore "$KEYSTORE_SERVER" -storetype PKCS12 \
-  -alias mtls-server -keyalg RSA -keysize 2048 -validity 365 \
+  -alias mtls-server -keyalg RSA -keysize 2048 -validity 54750 \
   -storepass password -keypass password \
   -dname "CN=localhost, OU=dev, O=example, L=city, ST=state, C=US"
 

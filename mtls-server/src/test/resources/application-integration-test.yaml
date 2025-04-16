@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: mtls-server
+
+server:
+  port: 8443
+  ssl:
+    key-store: src/test/resources/certs/mtls-server-keystore.p12
+    key-store-password: password
+    key-store-type: PKCS12
+    trust-store: src/test/resources/certs/mtls-server-truststore.p12
+    trust-store-password: password
+    trust-store-type: PKCS12
+    client-auth: need
+    enabled: true
+
+web-test-client:
+  ssl:
+    base-url: https://localhost:8443
+    storage-type: PKCS12
+    key-store-path: src/test/resources/certs/mtls-client-keystore.p12
+    key-store-password: password
+    trust-store-path: src/test/resources/certs/mtls-client-truststore.p12
+    trust-store-password: password
